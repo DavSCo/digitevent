@@ -1,0 +1,88 @@
+$backgroundcolor:#d4eee2 !important;
+$background_body_article: #2e3443;
+$font: "Roboto", sans-serif;
+
+$column: 4;
+
+body {
+  background-color: $backgroundcolor;
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+    color: #00b7ff;
+  }
+  
+  /*Card Article*/
+  .article {
+    border-radius: 0 !important;
+  }
+  
+  .image-article {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+  .body-article {
+    background-color: $background_body_article;
+  }
+  .grille-text {
+    font-family: $font;
+    color: #d4eee2;
+    text-align: end;
+  }
+  .grille-title {
+    font-family: $font;
+    color: #d4eee2;
+  }
+  
+  /**/
+  .gallery {
+    -webkit-column-count: $column;
+    -moz-column-count: $column;
+    column-count: $column;
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+  
+  .gallery .gallery-img-container {
+    width: 100%;
+    height: auto;
+    transition: 500ms;
+    margin-bottom: 10px;
+    page-break-inside: avoid; /* For Firefox. */
+    -webkit-column-break-inside: avoid; /* For Chrome & friends. */
+    break-inside: avoid; /* For standard browsers like IE. :-) */
+  }
+  
+  .gallery .gallery-img-container:hover {
+    opacity: 1;
+  }
+  
+  
+  
+  @media screen and (max-width: 767px) {
+    .gallery {
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2;
+    }
+    .gallery div {
+      margin: 0;
+      width: 200px;
+    }
+  }
+  
+  @media screen and (max-width: 479px) {
+    .gallery {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
+    }
+    .gallery div {
+      margin: 0;
+      width: 200px;
+    }
+  }
